@@ -88,7 +88,22 @@ a{
     }
 }
 /* end global rules */
-
+/* start ads */
+.ads{
+    background-color: var(--text-h-color);
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid var(--icon-color);
+    line-height: 1.7;
+}
+@media (max-width:767px) {
+    .ads{
+        font-size: 15px;
+    }
+}
+/* end ads */
 /* start header */
 header{
     padding: 20px;
@@ -180,7 +195,7 @@ header .qulaify{
 }
 @media (min-width:401px) and (max-width:767px) {
     header .img{
-        width: 250px;
+        width: 200px;
         top: initial;
         bottom: 0;
     }
@@ -213,9 +228,9 @@ header .qulaify{
     }
     header .button{
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 10px;
         padding: 25px;
-        font-size: 22px;
+        font-size: 22px;;
     }
 }
 @media (min-width:768px) and (max-width:1230px) {
@@ -657,8 +672,8 @@ footer .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-   gap: 40px;
-   text-align: center;
+    gap: 40px;
+    text-align: center;
 }
 footer .cond{
     display: flex;

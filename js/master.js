@@ -21,7 +21,9 @@ form.addEventListener("submit", e => {
         response => response.json()
         ).then((html) => {
         clearData();
-        window.alert("تم شكراً لك.")
+        // window.location.href = "../pages/thanks.html"
+        window.open('../pages/thanks.html', '_blank');
+
 
 });
 });
