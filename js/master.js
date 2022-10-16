@@ -22,7 +22,7 @@ form.addEventListener("submit", e => {
         ).then((html) => {
         clearData();
         // window.location.href = "../pages/thanks.html"
-        window.open('../pages/thanks.html', '_blank');
+        window.open('pages/thanks.html', '_blank');
 
 
 });
