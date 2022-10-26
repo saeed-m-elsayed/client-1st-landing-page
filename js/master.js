@@ -1,34 +1,36 @@
-//start sheetdb api form
+//start google sheet api form
 
 
     var form = document.getElementById('sheetdb-form');
     let name = document.getElementById("name");
     let phone = document.getElementById("phone");
     let date = document.getElementById("date");
+    let submit = document.getElementById("submit")
     let userDate = new Date();
     function clearData(){
         name.value = ''
         phone.value = ''
         date.value = ''
+        submit.value = 'أطلبيه الآن'
     }
-form.addEventListener("submit", e => {
-    date.value = userDate;
+
+
+jQuery('#frmSubmit').on('submit',function(e) {
     e.preventDefault();
-    fetch(form.action, {
-        method : "POST",
-        body: new FormData(document.getElementById("sheetdb-form")),
-    }).then(
-        response => response.json()
-        ).then((html) => {
-        clearData();
-        // window.location.href = "../pages/thanks.html"
-        window.open('../pages/thanks.html', '_blank');
+    submit.value = 'جارى الإرسال ...'
+    date.value = userDate;
+    jQuery.ajax({
+        url : 'https://script.google.com/macros/s/AKfycbwDiMUTIAL9NT9D6mJoDVyRKMS7sm94PjKgR8PZJCHHRtNVPGW8cZymgQzt8ODB6DzU7Q/exec',
+        type: 'POST',
+        data: jQuery('#frmSubmit').serialize(),
+        success:function(result){
+            window.open('../pages/thanks.html', '_blank');
+            clearData();
+        }
+    })
+})
 
-
-});
-});
-
-// end sheetdb api form
+// end google sheet api form
 
 // start sticky
 let sticky = document.getElementById("sticky-footer")
@@ -70,13 +72,7 @@ window.onload = function timeReady(){
     startInterval();
 }
 
-// reset.addEventListener('click', function(){
-//     h.value = 0;
-//     m.value = 0;
-//     s.value = 0;
-//     //stop the timer after pressing "reset"
-//     stopInterval()
-// })
+
 
 function timer(){
     if(h.value == 0 && m.value == 0 && s.value == 0){

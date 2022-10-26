@@ -30,7 +30,7 @@
             <div class="text">
                 <h1>إستعيدي جمال بشرتك</h1>
                 <p>بشرة مثالية خالية من البثور والشوائب في غضون شهر من استخدام جهاز تنظيف البشرة المتعدد</p>
-                <a class="button" href="#sheetdb-form">اطلبي الآن</a>
+                <a class="button" href="#frmSubmit">اطلبي الآن</a>
             </div>
         </div>
         <img class="product" src="images/1.webp" alt="صورة">
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <a class="button" href="#sheetdb-form">اطلبي الآن اثناء التخفيض</a>
+        <a class="button" href="#frmSubmit">اطلبي الآن اثناء التخفيض</a>
     </section>
     <!-- end description -->
     <!-- start reviews -->
@@ -265,10 +265,10 @@
                 <h4>إستعيدي جمال بشرتك بدون جلسات التجميل باهظة الثمن</h4>
                 <p>نتائج مبهرة في وقت قصير جداً وبدون تكلفه</p>
             </div>
-            <form action="https://sheetdb.io/api/v1/d3ocv8gnp04ka" method="post" id="sheetdb-form">
-                <input type="text" name="data[name]" id="name" required placeholder="&#xf007;  الأسم">
-                <input type="tel" name="data[phone]" id="phone" required placeholder="&#xf095;  هاتف">
-                <input type="text" name="data[date]" id="date" hidden>
+            <form  method="post" id="frmSubmit">
+                <input type="text" name= "user" id="name" required placeholder="&#xf007;  الأسم">
+                <input type="tel" name= "phone" id="phone" required placeholder="&#xf095;  هاتف">
+                <input type="text" name= "date" id="date" hidden>
                 <div class="price">
                     <div class="before">SAR 399</div>
                     <div class="after">SAR <span>249</span></div>
@@ -280,7 +280,7 @@
     </section>
     <!-- end form -->
     <!-- start sticky footer -->
-    <a href="#sheetdb-form" class="sticky-footer" id="sticky-footer">
+    <a href="#frmSubmit" class="sticky-footer" id="sticky-footer">
         أطلبيه الآن بالتخفيض!
     </a>
     <!-- end sticky footer -->
@@ -301,6 +301,10 @@
     </footer>
     
     <!-- end footer -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/master.js"></script>
+    <!-- <script> -->
+       
+    // </script>
 </body>
 </html
