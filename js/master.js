@@ -24,7 +24,7 @@ jQuery('#frmSubmit').on('submit',function(e) {
         type: 'POST',
         data: jQuery('#frmSubmit').serialize(),
         success:function(result){
-            window.open('../pages/thanks.html', '_blank');
+            window.open('pages/thanks.html', '_blank');
             clearData();
         }
     })
