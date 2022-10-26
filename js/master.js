@@ -17,6 +17,7 @@
 
 jQuery('#frmSubmit').on('submit',function(e) {
     e.preventDefault();
+<<<<<<< HEAD
     submit.value = 'جارى الإرسال ...'
     date.value = userDate;
     jQuery.ajax({
@@ -29,6 +30,17 @@ jQuery('#frmSubmit').on('submit',function(e) {
         }
     })
 })
+=======
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+        ).then((html) => {
+        clearData();
+        // window.location.href = "../pages/thanks.html"
+        window.open('pages/thanks.html', '_blank');
+>>>>>>> f4fbfdaae0e9086cf97c6adea6cbe7af181760df
 
 // end google sheet api form
 
